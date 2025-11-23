@@ -1,79 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cornelius Aurelius – Floating Certificates</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cornelius Aurelius – About Me</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      color: #0ff;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+<style>
+  body {
+    margin: 0;
+    background: #000;
+    color: #0ff;
+    font-family: Arial, sans-serif;
+  }
 
-    h1 {
-      margin: 20px 0;
-      font-size: 26px;
-      color: #0ff;
-    }
+  /* HEADER */
+  header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #00141a, #000);
+  }
 
-    .float-container {
-      position: relative;
-      width: 100vw;
-      height: 80vh;
-      overflow: hidden;
-    }
+  header h1 {
+    font-size: 40px;
+    margin: 0;
+    text-shadow: 0 0 10px #0ff;
+  }
 
-    .certificate {
-      position: absolute;
-      width: 280px;          /* Smaller size */
-      height: auto;
-      border: 2px solid #0ff;
-      border-radius: 10px;
-      animation: floatAcross 14s linear infinite;
-    }
+  header p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 20px auto 0;
+    opacity: 0.9;
+  }
 
-    /* Floating animation (left → right → left) */
-    @keyframes floatAcross {
-      0% {
-        transform: translateX(-30vw);
-      }
-      50% {
-        transform: translateX(30vw);
-      }
-      100% {
-        transform: translateX(-30vw);
-      }
-    }
+  /* SECTION TITLES */
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 0 0 10px #0ff;
+    margin-top: 60px;
+  }
 
-    /* Mobile Adjustments */
-    @media (max-width: 600px) {
-      .certificate {
-        width: 180px;
-      }
-    }
-  </style>
+  /* ABOUT ME SECTION */
+  .about {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  /* FLOATING CERTIFICATES */
+  .cert-container {
+    position: relative;
+    width: 100vw;
+    height: 240px;
+    overflow: hidden;
+    margin-top: 40px;
+    background: #000;
+    border-top: 2px solid #0ff;
+    border-bottom: 2px solid #0ff;
+  }
+
+  .cert {
+    position: absolute;
+    width: 180px;
+    height: auto;
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    animation: slide 18s linear infinite;
+  }
+
+  @keyframes slide {
+    0%   { transform: translateX(-250px); }
+    50%  { transform: translateX( calc(100vw - 100px) ); }
+    100% { transform: translateX(-250px); }
+  }
+
+  /* PROJECTS */
+  .projects {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .project-card {
+    border: 2px solid #0ff;
+    border-radius: 12px;
+    padding: 20px;
+    background: #001a1f;
+    text-align: center;
+    box-shadow: 0 0 15px #0ff;
+  }
+
+  .project-card a {
+    color: #0ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .project-card:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 40px;
+    margin-top: 60px;
+    border-top: 2px solid #0ff;
+    opacity: 0.8;
+  }
+
+  footer a {
+    color: #0ff;
+    text-decoration: none;
+    margin: 0 12px;
+  }
+</style>
 </head>
 <body>
 
-  <h1>Floating Certificates – Cornelius Aurelius</h1>
+<header>
+  <h1>Cornelius Aurelius</h1>
+  <p>Digital Architect • Informational Systems Researcher • Creator of Next-Gen Frameworks</p>
+</header>
 
-  <div class="float-container">
-    <img src="1.png" class="certificate" style="top: 5vh; animation-delay: 0s;">
-    <img src="2.png" class="certificate" style="top: 20vh; animation-delay: 2s;">
-    <img src="3.png" class="certificate" style="top: 35vh; animation-delay: 4s;">
-    <img src="4.png" class="certificate" style="top: 50vh; animation-delay: 6s;">
-    <img src="5.png" class="certificate" style="top: 65vh; animation-delay: 8s;">
-    <img src="6.png" class="certificate" style="top: 10vh; animation-delay: 10s;">
-    <img src="7.png" class="certificate" style="top: 30vh; animation-delay: 12s;">
-    <img src="8.png" class="certificate" style="top: 55vh; animation-delay: 14s;">
-    <img src="9.png" class="certificate" style="top: 75vh; animation-delay: 16s;">
-  </div>
+<h2>About Me</h2>
+<div class="about">
+  Cornelius Aurelius is a multidisciplinary thinker, digital architect, and creator of next-generation informational systems.
+  His work focuses on uncovering the deep structural laws that govern information, intelligence, perception, and transformation across all scales.
+  He builds frameworks and digital ecosystems designed with clarity, aesthetics, intelligence, and total functionality.
+</div>
+
+<h2>Certificates</h2>
+<div class="cert-container">
+  <img src="1.png" class="cert" style="top:20px; animation-delay:0s;">
+  <img src="2.png" class="cert" style="top:30px; animation-delay:2s;">
+  <img src="3.png" class="cert" style="top:40px; animation-delay:4s;">
+  <img src="4.png" class="cert" style="top:50px; animation-delay:6s;">
+  <img src="5.png" class="cert" style="top:60px; animation-delay:8s;">
+  <img src="6.png" class="cert" style="top:70px; animation-delay:10s;">
+  <img src="7.png" class="cert" style="top:80px; animation-delay:12s;">
+  <img src="8.png" class="cert" style="top:90px; animation-delay:14s;">
+  <img src="9.png" class="cert" style="top:100px; animation-delay:16s;">
+</div>
+
+<h2>Projects</h2>
+<div class="projects">
+
+  <div class="project-card"><a href="https://cornelius-aurelius.github.io/law_of_informational_gradient_minimization/">Informational Gradient Minimization</a></div>
+  <div class="project-card"><a href="https://cornelius-aurelius.github.io/Law-of-Informational-Compensation/">Informational Compensation</a></div>
+  <div class="project-card"><a href="https://cornelius-aurelius.github.io/Law-of-Becoming/">Law of Becoming</a></div>
+  <div class="project-card"><a href="https://cornelius-aurelius.github.io/Information-Awareness-Variational-Principle/">Informational Awareness Principle</a></div>
+  <div class="project-card"><a href="https://cornelius-aurelius.github.io/Self-Renewing-Informational-Continuum/">Self-Renewing Informational Continuum</a></div>
+  <div class="project-card"><a href="https://cornelius-aurelius.github.io/Cosmic-Recurrence-Law/">Cosmic Recurrence Law</a></div>
+
+</div>
+
+<footer>
+  <p>
+    <a href="https://corneliusaurelius.com/">Main Site</a> |
+    <a href="https://medium.com/@138licensing">Medium</a> |
+    <a href="https://zenodo.org/">Zenodo</a> |
+    <a href="mailto:138licensing@gmail.com">138licensing@gmail.com</a>
+  </p>
+</footer>
 
 </body>
 </html>
